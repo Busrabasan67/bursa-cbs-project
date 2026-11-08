@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bursa CBS Harita Uygulaması</title>
+
+    <!-- MapLibre GL JS CSS & JS -->
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css?v=5" />
+</head>
+
+<body>
+
+    <!-- Sol Panel -->
+    <aside id="sidebar">
+        <!-- Başlık -->
+        <div class="sidebar-header">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Bursa CBS Portalı</span>
+        </div>
+
+        <!-- Hızlı Harita Ayarları (Altlık & Katmanlar Tek Kompakt Alanda) -->
+        <div class="quick-settings">
+            <div class="setting-group">
+                <span class="setting-label">Harita:</span>
+                <div class="basemap-selector">
+                    <button class="basemap-btn active" data-style="positron">Açık</button>
+                    <button class="basemap-btn" data-style="dark">Koyu</button>
+                    <button class="basemap-btn" data-style="osm">Standart</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <span class="setting-label">Katman:</span>
+                <div class="layer-chips">
+                    <label class="chip active">
+                        <input type="checkbox" id="layer-districts" checked />
+                        <span class="dot blue"></span> İlçeler
+                    </label>
+                    <label class="chip active">
+                        <input type="checkbox" id="layer-hospitals" checked />
+                        <span class="dot red"></span> Hastaneler
+                    </label>
+                    <label class="chip active">
+                        <input type="checkbox" id="layer-drawings" checked />
+                        <span class="dot green"></span> Çizimler
+                    </label>
+                    <label class="chip" title="Harici Raster Uydu Servisi (Yüksek Çözünürlüklü Hava / Uydu)">
+                        <input type="checkbox" id="layer-wms" />
+                        <span class="dot amber"></span> WMS
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Sade Sekme -->
+        <div class="sidebar-tabs">
+            <button class="tab-btn active" data-tab="tab-hospitals">
+                <i class="fa-solid fa-hospital"></i> Hastaneler
+            </button>
+            <button class="tab-btn" data-tab="tab-drawings">
+                <i class="fa-solid fa-pen-ruler"></i> Çizimler (<span id="drawings-count">0</span>)
+            </button>
+            <button class="tab-btn" data-tab="tab-analysis">
+                <i class="fa-solid fa-compass"></i> Analiz
+            </button>
+        </div>
+
+        <!-- SEKME 1: HASTANELER (Arama + Liste) -->
+        <div id="tab-hospitals" class="tab-content active">
+            <div class="filter-box">
+                <div class="search-input-wrap">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Hastane veya cadde ara..." />
+                </div>
+
+                <div class="filter-row">
+                    <select id="district-filter">
+                        <option value="">Tüm İlçeler</option>
+                    </select>
+                    <button id="btn-filter-clear" title="Filtreyi Temizle">Temizle</button>
+                </div>
+
+                <label class="emergency-check">
+                    <input type="checkbox" id="filter-emergency" />
+                    <span>Sadece Acil Servisi Olanlar</span>
+                </label>
+            </div>
+
+            <div class="list-info" id="search-results-count">54 hastane listeleniyor</div>
+            <div id="search-results-list" class="item-list"></div>
+        </div>
+
+        <!-- SEKME 2: ÇİZİMLERİM (Yeni Çizim + Liste) -->
+        <div id="tab-drawings" class="tab-content">
+            <div class="draw-box">
+                <div class="draw-box-title">Haritaya Yeni Çizim Ekle:</div>
+                <div class="draw-buttons">
+                    <button class="draw-btn" id="btn-draw-point">
+                        <i class="fa-solid fa-location-dot"></i> + Nokta
+                    </button>
+                    <button class="draw-btn" id="btn-draw-line">
+                        <i class="fa-solid fa-route"></i> + Çizgi
+                    </button>
+                    <button class="draw-btn" id="btn-draw-polygon">
+                        <i class="fa-solid fa-draw-polygon"></i> + Alan
+                    </button>
+                </div>
+            </div>
+
+            <div class="list-info">Kayıtlı Çizimler</div>
+            <div class="drawings-filter-tabs">
+                <button class="draw-filter-btn active" data-dtype="all">Tümü</button>
+                <button class="draw-filter-btn" data-dtype="point">
+                    <i class="fa-solid fa-location-dot"></i> Nokta
+                </button>
+                <button class="draw-filter-btn" data-dtype="line">
+                    <i class="fa-solid fa-route"></i> Çizgi
+                </button>
+                <button class="draw-filter-btn" data-dtype="polygon">
+                    <i class="fa-solid fa-draw-polygon"></i> Alan
+                </button>
+            </div>
+            <div id="drawings-list" class="item-list"></div>
+        </div>
+
+        <!-- SEKME 3: GEOMETRİK ANALİZ -->
+        <div id="tab-analysis" class="tab-content">
+            <div class="analysis-mode-tabs">
+                <button class="analysis-mode-btn active" data-panel="panel-nearest">
+                    En Yakın
+                </button>
+                <button class="analysis-mode-btn" data-panel="panel-polygon">
+                    Alan İçi
+                </button>
+                <button class="analysis-mode-btn" data-panel="panel-buffer">
+                    Tampon
+                </button>
+                <button class="analysis-mode-btn" data-panel="panel-measure">
+                    Ölçüm
+                </button>
+                <button class="analysis-mode-btn" data-panel="panel-choropleth">
+                    Tematik
+                </button>
+            </div>
+
+            <!-- PANEL 1: EN YAKIN N HASTANE -->
+            <div id="panel-nearest" class="analysis-box">
+                <div class="nearest-inline-row">
+                    <div class="nearest-count-box">
+                        <span>Adet</span>
+                        <input type="number" id="nearest-count-input" value="3" min="1" max="20" />
+                    </div>
+                    <button id="btn-start-nearest" class="btn-analysis-primary">
+                        <i class="fa-solid fa-location-crosshairs"></i> Konum Seç
+                    </button>
+                </div>
+            </div>
+
+            <!-- PANEL 2: ALAN İÇİNDE KALANLAR -->
+            <div id="panel-polygon" class="analysis-box" style="display: none;">
+                <select id="polygon-select-source" class="analysis-select">
+                    <option value="">İlçe veya Kayıtlı Alan Seçin...</option>
+                </select>
+                <button id="btn-draw-analysis-polygon" class="btn-analysis-outline">
+                    <i class="fa-solid fa-draw-polygon"></i> Haritada Yeni Alan Çiz
+                </button>
+            </div>
+
+            <!-- PANEL 3: YAKINLIK / TAMPON BÖLGE (BUFFER) -->
+            <div id="panel-buffer" class="analysis-box" style="display: none;">
+                <div class="nearest-inline-row">
+                    <div class="nearest-count-box">
+                        <span>Yarıçap (m)</span>
+                        <input type="number" id="buffer-radius-input" value="1000" min="100" max="50000" step="100" style="width: 58px;" />
+                    </div>
+                    <button id="btn-start-buffer" class="btn-analysis-primary">
+                        <i class="fa-solid fa-bullseye"></i> Nokta / Obje Seç
+                    </button>
+                </div>
+                <select id="buffer-select-drawing" class="analysis-select">
+                    <option value="">veya Kayıtlı Nokta / Çizgi / Alan Seçin...</option>
+                </select>
+            </div>
+
+            <!-- PANEL 4: METRİK ÖLÇÜM (UZUNLUK / ALAN) -->
+            <div id="panel-measure" class="analysis-box" style="display: none;">
+                <select id="measure-select-source" class="analysis-select">
+                    <option value="">Kayıtlı Çizim veya İlçe Seçin...</option>
+                </select>
+                <div class="nearest-inline-row">
+                    <button id="btn-measure-line" class="btn-analysis-outline">
+                        <i class="fa-solid fa-ruler-horizontal"></i> Mesafe Ölç
+                    </button>
+                    <button id="btn-measure-polygon" class="btn-analysis-outline">
+                        <i class="fa-solid fa-vector-square"></i> Alan Ölç
+                    </button>
+                </div>
+            </div>
+
+            <!-- PANEL 5: MEKÂNSAL BİRLEŞTİRME & TEMATİK (CHOROPLETH) HARİTA -->
+            <div id="panel-choropleth" class="analysis-box" style="display: none;">
+                <button id="btn-run-choropleth" class="btn-analysis-primary">
+                    <i class="fa-solid fa-map"></i> İlçe Hastane Yoğunluğunu Göster
+                </button>
+                <div class="choropleth-legend">
+                    <span class="legend-chip"><i style="background:#e2e8f0"></i>0</span>
+                    <span class="legend-chip"><i style="background:#fde68a"></i>1-2</span>
+                    <span class="legend-chip"><i style="background:#fb923c"></i>3-5</span>
+                    <span class="legend-chip"><i style="background:#ef4444"></i>6-9</span>
+                    <span class="legend-chip"><i style="background:#991b1b"></i>10+</span>
+                </div>
+            </div>
+
+            <div class="list-info analysis-header-bar">
+                <span id="analysis-results-header">Sonuçlar</span>
+                <button id="btn-clear-analysis" class="btn-analysis-clear" style="display: none;">
+                    Temizle
+                </button>
+            </div>
+
+            <div id="analysis-results-list" class="item-list">
+                <div class="empty-hint">
+                    Haritadan bir konum veya alan seçerek analizi başlatın.
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Harita Alanı -->
+    <main id="map-wrapper">
+        <div id="map"></div>
+
+        <!-- Çizim Yapılırken Harita Üstünde Çıkan Sade Kontrol Çubuğu -->
+        <div id="floating-draw-bar" class="floating-draw-bar" style="display: none;">
+            <span id="floating-draw-text">Çizim Modu</span>
+            <div class="floating-actions">
+                <button id="btn-floating-undo" class="float-btn" style="display: none;">Geri Al</button>
+                <button id="btn-floating-finish" class="float-btn primary" style="display: none;">✔ Tamamla</button>
+                <button id="btn-floating-cancel" class="float-btn danger">✖ İptal</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hastane Düzenleme Modalı -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Hastane Bilgisini Düzenle</h4>
+                <button id="modal-close-btn" class="modal-close-x">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="edit-id" />
+
+                <label for="edit-name">Hastane Adı *</label>
+                <input type="text" id="edit-name" required />
+
+                <label for="edit-district">İlçe *</label>
+                <select id="edit-district"></select>
+
+                <label for="edit-street">Cadde / Sokak</label>
+                <input type="text" id="edit-street" />
+
+                <label for="edit-phone">Telefon</label>
+                <input type="tel" id="edit-phone" placeholder="0224 XXX XX XX" />
+
+                <label for="edit-website">Web Sitesi</label>
+                <input type="url" id="edit-website" placeholder="https://..." />
+
+                <label class="modal-check">
+                    <input type="checkbox" id="edit-emergency" />
+                    <span>Acil Servis Hizmeti Var</span>
+                </label>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel-edit" class="btn-secondary">İptal</button>
+                <button id="btn-save-edit" class="btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Çizim Kaydet / Düzenle Modalı -->
+    <div id="drawing-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="drawing-modal-title">Yeni Çizimi Kaydet</h4>
+                <button id="drawing-modal-close-btn" class="modal-close-x">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="drawing-id" />
+                <div class="drawing-type-badge" id="drawing-type-badge">Geometri: Nokta</div>
+
+                <label for="drawing-name">Çizim Adı *</label>
+                <input type="text" id="drawing-name" required placeholder="Örn: Yeni Sağlık Merkezi" />
+
+                <label for="drawing-desc">Açıklama</label>
+                <textarea id="drawing-desc" rows="3" placeholder="İsteğe bağlı açıklama..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel-drawing" class="btn-secondary">İptal</button>
+                <button id="btn-save-drawing" class="btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=12"></script>
+</body>
+
+</html>

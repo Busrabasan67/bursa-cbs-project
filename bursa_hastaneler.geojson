@@ -1,0 +1,1122 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-02T13:00:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/26446090",
+      "properties": {
+        "@id": "way/26446090",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Çekirge Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0139942,
+          40.2022893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/193389014",
+      "properties": {
+        "@id": "way/193389014",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Karacabey Eski Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3545438,
+          40.2147015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/302549670",
+      "properties": {
+        "@id": "way/302549670",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Dörtçelik Çocuk Hastanesi",
+        "phone": "+90 224 275 20 00",
+        "social_facility:for": "child",
+        "website": "http://www.bch.gov.tr",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9207083,
+          40.2185237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308062099",
+      "properties": {
+        "@id": "way/308062099",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Özel Pedmer Çocuk Sağlığı Tıp Merkezi",
+        "website": "https://www.pedmer.com.tr/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9598904,
+          40.2213534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308065253",
+      "properties": {
+        "@id": "way/308065253",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Acıbadem Bursa Hastanesi",
+        "operator": "Acıbadem",
+        "operator:type": "private",
+        "operator:wikidata": "Q19610384",
+        "phone": "444 55 44",
+        "website": "https://www.acibadem.com.tr/danisma/Hastaneler/40/13/bursa-hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.976127,
+          40.2128212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/328024078",
+      "properties": {
+        "@id": "way/328024078",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Yüksek İhtisas Eğitim ve Araştırma Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1286432,
+          40.1848421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/349996095",
+      "properties": {
+        "@id": "way/349996095",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Bursa Devlet Hastanesi",
+        "not:operator:wikidata": "Q4294365",
+        "operator": "Sağlık Bakanlığı",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0521536,
+          40.1871492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/366079526",
+      "properties": {
+        "@id": "way/366079526",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Mustafakemalpaşa Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294365",
+        "operator:wikipedia": "tr:Türkiye Cumhuriyeti Sağlık Bakanlığı",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3633554,
+          40.0290772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/379514273",
+      "properties": {
+        "@id": "way/379514273",
+        "addr:city": "Karacabey/Bursa",
+        "addr:district": "Karacabey",
+        "addr:housenumber": "2",
+        "addr:neighbourhood": "Mecidiye Mh.",
+        "addr:postcode": "16700",
+        "addr:street": "Şifa Sk.",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Karacabey Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294365",
+        "operator:wikipedia": "tr:Türkiye Cumhuriyeti Sağlık Bakanlığı",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3476694,
+          40.2082437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/411659382",
+      "properties": {
+        "@id": "way/411659382",
+        "amenity": "hospital",
+        "building": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "VM Medical Park",
+        "operator": "Medical Park",
+        "operator:type": "private",
+        "operator:wikidata": "Q6073312",
+        "website": "https://www.medicalpark.com.tr/bursa",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0604788,
+          40.1935077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/430011893",
+      "properties": {
+        "@id": "way/430011893",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Medikabil Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9789528,
+          40.2333184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/432789919",
+      "properties": {
+        "@id": "way/432789919",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Bursa Devlet Hastanesi",
+        "source": "Esri Luftbilder",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0559757,
+          40.1957852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/441403984",
+      "properties": {
+        "@id": "way/441403984",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "İlker Çelikcan Fizik Tedavi ve Rehabilitasyon Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.017615,
+          40.2018884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/455513892",
+      "properties": {
+        "@id": "way/455513892",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Mudanya Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9293027,
+          40.3231137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/455513894",
+      "properties": {
+        "@id": "way/455513894",
+        "amenity": "hospital",
+        "building": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Doruk Yıldırım Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.109899,
+          40.1919633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/455513895",
+      "properties": {
+        "@id": "way/455513895",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Doruk Tıp Merkezi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1094214,
+          40.1918401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/461154339",
+      "properties": {
+        "@id": "way/461154339",
+        "amenity": "hospital",
+        "building": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Medicabil Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1148832,
+          40.191166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/480990380",
+      "properties": {
+        "@id": "way/480990380",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Yıldırım Belediyesi Tıp Merkezi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1097454,
+          40.1789904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/534271451",
+      "properties": {
+        "@id": "way/534271451",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Çocuk Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0215999,
+          40.2052938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/537776182",
+      "properties": {
+        "@id": "way/537776182",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Doruk Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0202803,
+          40.2042341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/537776184",
+      "properties": {
+        "@id": "way/537776184",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Kalp ve Aritmi Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0210491,
+          40.2050477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/630767262",
+      "properties": {
+        "@id": "way/630767262",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Orhaneli Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:wikidata": "Q4294365",
+        "website": "https://orhanelidh.saglik.gov.tr/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9865497,
+          39.9104446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/632460745",
+      "properties": {
+        "@id": "way/632460745",
+        "addr:city": "Bursa",
+        "addr:district": "Nilüfer",
+        "addr:housenumber": "No : 1",
+        "addr:neighbourhood": "Doğanköy Mahallesi",
+        "addr:postcode": "16250",
+        "addr:street": "Şifa Caddesi",
+        "amenity": "hospital",
+        "check_date": "2025-03-01",
+        "email": "bursasehir@saglik.gov.tr",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Bursa Şehir Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294365",
+        "phone": "+90 224 975 00 00",
+        "wikidata": "Q64412760",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9090974,
+          40.2689006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/665673273",
+      "properties": {
+        "@id": "way/665673273",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8699364,
+          40.2209491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/666689302",
+      "properties": {
+        "@id": "way/666689302",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Bursa Uludağ Üniversitesi Hastanesi",
+        "name:en": "Bursa Uludag University Hospital",
+        "operator": "Bursa Uludağ Üniversitesi",
+        "operator:type": "university",
+        "website": "https://hastane.uludag.edu.tr/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8698127,
+          40.2216282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/690680516",
+      "properties": {
+        "@id": "way/690680516",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Yüksek İhtisas Eğitim ve Araştırma Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9799179,
+          40.2316876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/719668513",
+      "properties": {
+        "@id": "way/719668513",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Gürsu Cüneyt Yıldız Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1731452,
+          40.2255624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/744835723",
+      "properties": {
+        "@id": "way/744835723",
+        "addr:city": "Bursa",
+        "addr:district": "İnegöl",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "İnegöl Devlet Hastanesi",
+        "operator:type": "public",
+        "phone": "+90 224 715 17 15",
+        "website": "https://inegoldh.saglik.gov.tr/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4977,
+          40.0810845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/744903098",
+      "properties": {
+        "@id": "way/744903098",
+        "addr:city": "Bursa",
+        "addr:district": "İnegöl",
+        "amenity": "hospital",
+        "building": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Özel Aritmi İnegöl Hastanesi",
+        "phone": "+90 224 711 01 21",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4952378,
+          40.0895081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/784544461",
+      "properties": {
+        "@id": "way/784544461",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Gemlik Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294365",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1856411,
+          40.4329583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/795405724",
+      "properties": {
+        "@id": "way/795405724",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "İznik Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:wikidata": "Q4294365",
+        "phone": "+90 224 757 75 80",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7171802,
+          40.4435614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/835673410",
+      "properties": {
+        "@id": "way/835673410",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Orhangazi Devlet Hastanesi",
+        "name:en": "Orhangazi State Hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2993124,
+          40.4971601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/864700743",
+      "properties": {
+        "@id": "way/864700743",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Yenişehir Devlet Hastanesi",
+        "not:operator:wikidata": "Q4294365",
+        "operator": "Sağlık Bakanlığı",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6320407,
+          40.2670098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1031328769",
+      "properties": {
+        "@id": "way/1031328769",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "psychiatry",
+        "name": "Yüksek Güvenlikli Adli Psikiyatri Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9040042,
+          40.2620206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1148944004",
+      "properties": {
+        "@id": "way/1148944004",
+        "addr:city": "Bursa",
+        "addr:district": "Osmangazi",
+        "addr:neighbourhood": "Elmasbahçeler",
+        "addr:street": "1. Atan Sokak",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "height": "6",
+        "level": "1",
+        "name": "Özel Hayat Hastanesi",
+        "operator": "Hayat",
+        "operator:type": "private",
+        "source": "microsoft/BuildingFootprints",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0770907,
+          40.191826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1157168602",
+      "properties": {
+        "@id": "way/1157168602",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Bursa Yüksek İhtisas Eğitim ve Araştırma Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8238602,
+          40.2184925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1329904493",
+      "properties": {
+        "@id": "way/1329904493",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3545828,
+          40.2147257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1329904587",
+      "properties": {
+        "@id": "way/1329904587",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.355047,
+          40.2145912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1329904612",
+      "properties": {
+        "@id": "way/1329904612",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3541181,
+          40.2145287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1337703992",
+      "properties": {
+        "@id": "way/1337703992",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Harmancık Devlet Hastanesi",
+        "operator": "Sağlık Bakanlığı",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294365",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1554254,
+          39.6798002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1337703997",
+      "properties": {
+        "@id": "way/1337703997",
+        "amenity": "hospital",
+        "building": "yes",
+        "healthcare": "hospital",
+        "name": "Harmancık Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1554578,
+          39.6796883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1338854109",
+      "properties": {
+        "@id": "way/1338854109",
+        "amenity": "hospital",
+        "building": "hospital",
+        "healthcare": "hospital",
+        "name": "Doruk Nilüfer Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9918328,
+          40.2090419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1384580578",
+      "properties": {
+        "@id": "way/1384580578",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "general",
+        "name": "Keles Devlet Hastanesi",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q30329577",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2306493,
+          39.9127244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1456975498",
+      "properties": {
+        "@id": "way/1456975498",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Burtom Konur Cerrahi Tıp Merkezi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.02025,
+          40.2050503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1498628374",
+      "properties": {
+        "@id": "way/1498628374",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Büyükorhan Devlet Hastanesi",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8825294,
+          39.775243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1553671317",
+      "properties": {
+        "@id": "way/1553671317",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.5829876,
+          40.2805656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2096745663",
+      "properties": {
+        "@id": "node/2096745663",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Anadolu Hastanesi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9755935,
+          40.2109163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4999155322",
+      "properties": {
+        "@id": "node/4999155322",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Özel Jimer Hastanesi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9937293,
+          40.2062437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7105076787",
+      "properties": {
+        "@id": "node/7105076787",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Ceylan International Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9532245,
+          40.2568622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10121767897",
+      "properties": {
+        "@id": "node/10121767897",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "gynaecology;paediatrics;surgery;internal",
+        "name": "Özel PembeMavi Hastanesi",
+        "operator": "Özel PembeMavi Hastanesi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9801761,
+          40.2327279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12235802501",
+      "properties": {
+        "@id": "node/12235802501",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Atakent cerrahi tıp merkezi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.3116351,
+          40.4925711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12541851708",
+      "properties": {
+        "@id": "node/12541851708",
+        "addr:city": "Bursa",
+        "addr:district": "Nilüfer",
+        "addr:housenumber": "No:18",
+        "addr:neighbourhood": "Konak mh",
+        "addr:postcode": "16110",
+        "addr:street": "Yıldırım Caddesi",
+        "amenity": "hospital",
+        "email": "dtanilaslan@gmail.com",
+        "healthcare": "hospital",
+        "healthcare:speciality": "dentist",
+        "mobile": "+905326019416",
+        "name": "Diş Hekimi Anıl Aslan",
+        "operator": "Diş Hekimi Anıl Aslan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9906163,
+          40.2075068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13836159666",
+      "properties": {
+        "@id": "node/13836159666",
+        "addr:city": "Bursa",
+        "addr:district": "Osmangazi",
+        "addr:neighbourhood": "Altınova",
+        "addr:postcode": "16250",
+        "addr:street": "2. Altınova Sk",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "name": "Bursa Dr. Ayten Bozkaya Spastik Çocuklar Hastanesi Ve Rehabilitasyon Merkezi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.067544,
+          40.2146893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13864116302",
+      "properties": {
+        "@id": "node/13864116302",
+        "addr:street": "Büyükkumla-Küçükkumla Yolu",
+        "amenity": "hospital",
+        "check_date": "2026-05-23",
+        "healthcare": "hospital",
+        "name": "Küçükkumla Sağlık Ocağı"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1030043,
+          40.4722602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13872729502",
+      "properties": {
+        "@id": "node/13872729502",
+        "amenity": "hospital",
+        "check_date": "2026-05-23",
+        "healthcare": "hospital",
+        "name": "Karacaali Sağlık Ocağı"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0648808,
+          40.4793659
+        ]
+      }
+    }
+  ]
+}
